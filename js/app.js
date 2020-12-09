@@ -7,10 +7,10 @@ var lineChart = new Chart(line, {
             label: '# of Votes',
             data: [575, 1250, 1000,1500, 2000, 1500, 1750, 1500, 1750, 2250, 1750, 2250 ],
             backgroundColor: [
-                'rgba(255, 255, 255, 0.2)',
+                'rgba(255, 255, 0, 0.2)',
             ],
             borderColor: [
-                'rgba(255, 255, 255,255)',
+                'rgba(255, 255, 0,255)',
             ],
             borderWidth: 1
         }]

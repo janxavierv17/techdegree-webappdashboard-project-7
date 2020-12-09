@@ -1,0 +1,42 @@
+.main-header {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  input {
+    width: 200px;
+    border: 1px grey solid;
+    border-radius: 5px;
+    padding: 7px;
+
+    &::placeholder {
+      font-size: 12px;
+    }
+  }
+}
+
+.traffic {
+  padding: 10px;
+  .traffic-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .traffic-nav {
+      display: flex;
+      flex-direction: row;
+      .traffic-nav-link {
+        list-style: none;
+        padding: 1rem;
+        font-weight: 500;
+      }
+      .active {
+        background-color: #8cce99;
+        color: white;
+        border-radius: 50px;
+      }
+    }
+  }
+}
