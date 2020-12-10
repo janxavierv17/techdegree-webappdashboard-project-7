@@ -7,10 +7,10 @@ var lineChart = new Chart(line, {
             label: '# of Votes',
             data: [575, 1250, 1000,1500, 2000, 1500, 1750, 1500, 1750, 2250, 1750, 2250 ],
             backgroundColor: [
-                'rgba(255, 255, 0, 0.2)',
+                'rgba(226, 227, 246)',
             ],
             borderColor: [
-                'rgba(255, 255, 0,255)',
+                'rgba(115, 119, 191)',
             ],
             borderWidth: 1
         }]
@@ -33,10 +33,23 @@ var barChart = new Chart(bar, {
         datasets: [{
             data: [75, 100, 175, 125, 225, 200, 100],
             backgroundColor: [
-                'rgba(255, 255, 255, 0.2)',
+                'rgba(115, 119, 191)',
+                'rgba(115, 119, 191)',
+                'rgba(115, 119, 191)',
+                'rgba(115, 119, 191)',
+                'rgba(115, 119, 191)',
+                'rgba(115, 119, 191)',
+                'rgba(115, 119, 191)',
             ],
             borderColor: [
-                'rgba(255, 255, 255,255)',
+                'rgba(115, 119, 191)',                'rgba(115, 119, 191)',
+                'rgba(115, 119, 191)',
+                'rgba(115, 119, 191)',
+                'rgba(115, 119, 191)',
+                'rgba(115, 119, 191)',
+                'rgba(115, 119, 191)',
+
+
             ],
             borderWidth: 1
         }]
@@ -52,17 +65,11 @@ var barChart = new Chart(doughnut, {
         datasets: [{
             data: [10,15,75],
             backgroundColor: [
-                'rgba(255, 255, 255, 0.2)',
-            ],
-            borderColor: [
-                'rgba(255, 255, 255,255)',
-            ],
-            borderWidth: 1, 
-            borderAlign: 'inner'
+                'rgba(116, 177, 191)',
+                'rgba(129, 201, 143)',
+                'rgba(115, 119, 191)',
+            ]
         }]
     },
-    options: {
-        scales: {
-        }
-    }
+
 });
