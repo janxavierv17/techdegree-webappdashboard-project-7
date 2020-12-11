@@ -312,15 +312,34 @@
       <section class="settings">
         <h3>Settings</h3>
         <!-- Custom CSS Toggle code -->
-
+        <label class="switch-light switch-ios" onclick="">
+          <input type="checkbox" />
+          <strong>Send Email Notifications</strong>
+          <span class="toggle">
+            <span>Off</span>
+            <span>on</span>
+            <a></a>
+          </span>
+        </label>
         <!-- Custom CSS Toggle code -->
+        <label class="switch-light switch-ios" onclick="">
+          <input type="checkbox" />
+          <strong>Set Profile to Public</strong>
+          <span class="toggle">
+            <span>Off</span>
+            <span>on</span>
+            <a></a>
+          </span>
+        </label>
 
         <select>
-          <div class="settings-button">
-            <button class="button-primary" id="save">Save</button>
-            <button class="button-disabled" id="cancel">Cancel</button>
-          </div>
+          <option disabled selected>Select a Timezone</option>
+          <option>Eastern</option>
         </select>
+        <div class="settings-button">
+          <button class="button-primary" id="save">Save</button>
+          <button class="button-disabled" id="cancel">Cancel</button>
+        </div>
       </section>
     </main>
     <script src="js/app.js"></script>

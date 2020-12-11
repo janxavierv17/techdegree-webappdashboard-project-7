@@ -823,17 +823,32 @@ nav img {
 }
 
 .main-header {
-  padding: 10px;
+  height: 75px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
+.main-header h2 {
+  color: #c0c0c0;
+  margin-left: 10px;
+}
+.main-header .main-header-search {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #fbfbfb;
+  border: 1px solid #d1d1d1;
+  width: 80%;
+  height: 100%;
+}
 .main-header input {
+  margin-right: 10px;
   width: 200px;
   border: 1px #c0c0c0 solid;
   border-radius: 5px;
   padding: 7px;
+  height: 50%;
 }
 .main-header input::placeholder {
   font-size: 12px;
@@ -1024,8 +1039,52 @@ nav img {
 .settings {
   display: flex;
   flex-direction: column;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
+}
+.settings strong {
+  color: #c0c0c0;
+  width: 200px;
+}
+.settings .switch-light {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 75%;
+  padding: 10px;
+}
+.settings .switch-light .toggle {
+  width: 30%;
+}
+.settings select {
+  border: 1px #c0c0c0 solid;
+  padding: 10px;
+  height: 35px;
+  width: 90%;
+}
+.settings select option {
+  color: #c0c0c0;
+}
+.settings .settings-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.settings .settings-button #save,
+.settings .settings-button #cancel {
+  margin: 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  width: 20%;
+  height: 50px;
+}
+.settings .settings-button #save {
+  background-color: #7377bf;
+}
+.settings .settings-button #cancel {
+  background-color: #b2b2b2;
 }
 
 /*# sourceMappingURL=styles.css.map */
