@@ -4,8 +4,20 @@ nav {
   justify-content: center;
   align-items: center;
   img {
-    padding-left: 25px;
+    margin: 0 10px 0 10px;
     height: 50px;
-    width: 50px;
+    width: 25px;
+  }
+}
+
+@media (min-width: 768px) {
+  nav {
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    & a:hover {
+      border-left: 3px springgreen solid;
+    }
   }
 }

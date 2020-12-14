@@ -1,3 +1,21 @@
+const alertBanner = document.getElementById("alert")
+
+alertBanner.innerHTML = 
+`
+<div class="alertBanner">
+<p><strong>Alert:</strong> You have unread messages. </p>
+<p id="alertBanner-close">x</p>
+</div>
+`
+const alertBannerClose = document.getElementById("alertBanner-close");
+
+alertBannerClose.addEventListener("click", function(){
+    alertBanner.style.display="none";
+})
+
+console.log(alertBannerClose)
+
+
 var line = document.getElementById('traffic-chart').getContext('2d');
 var lineChart = new Chart(line, {
     type: 'line',
@@ -12,19 +30,26 @@ var lineChart = new Chart(line, {
             borderColor: [
                 'rgba(115, 119, 191)',
             ],
-            borderWidth: 1
+            borderWidth: 1,
+            responsive:true,
         }]
     },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
+    options:{
+        scales:{
+            yAxes:[{
+                ticks:{
+                    beginAtZero:true,
                 }
             }]
+        },
+        legend:{
+            display:false,
         }
-    }
+
+    },
 });
+
+
 var bar = document.getElementById("daily-chart").getContext("2d")
 var barChart = new Chart(bar, {
     type: 'bar',
@@ -42,19 +67,31 @@ var barChart = new Chart(bar, {
                 'rgba(115, 119, 191)',
             ],
             borderColor: [
-                'rgba(115, 119, 191)',                'rgba(115, 119, 191)',
+                'rgba(115, 119, 191)',                
                 'rgba(115, 119, 191)',
                 'rgba(115, 119, 191)',
                 'rgba(115, 119, 191)',
                 'rgba(115, 119, 191)',
                 'rgba(115, 119, 191)',
-
-
+                'rgba(115, 119, 191)',
             ],
-            borderWidth: 1
+            borderWidth: 1,
+            responsive:true,
         }]
     },
+    options:{
+        scales:{
+            yAxes:[{
+                ticks:{
+                    beginAtZero:true
+                }
+            }]
+        },
+        legend:{
+            display:false,
+        }
 
+    },
 });
 
 var doughnut = document.getElementById("mobileUsers-chart").getContext("2d")
@@ -68,8 +105,12 @@ var barChart = new Chart(doughnut, {
                 'rgba(116, 177, 191)',
                 'rgba(129, 201, 143)',
                 'rgba(115, 119, 191)',
-            ]
+            ],
+            responsive:true,
         }]
+    },options: {
+        legend:{
+            position:'right',
+        }
     },
-
 });
