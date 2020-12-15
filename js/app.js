@@ -114,3 +114,19 @@ var barChart = new Chart(doughnut, {
         }
     },
 });
+
+const userField = document.querySelector("#userField");
+const messageField = document.querySelector("#messageField")
+const send = document.querySelector("#send");
+
+send.addEventListener("click", () => {
+    if(userField.value === "" && messageField.value === ""){
+        alert("Please enter a user and a message before sending.")
+    }else if(userField.value === ""){
+        alert("Please enter the user name.")
+    }else if(messageField.value ===  ""){
+        alert("Please type a message for the user.")
+    }else{
+        alert(`Message has been sent to: ${userField.value}`)
+    }
+})

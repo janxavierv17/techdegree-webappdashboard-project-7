@@ -177,6 +177,9 @@
 .recent-activity {
   padding: 10px;
   text-align: center;
+  .recentHeader {
+    color: #c0c0c0;
+  }
   .recent-container {
     display: flex;
     flex-direction: column;
@@ -186,7 +189,8 @@
       width: 100%;
       display: flex;
       flex-direction: row;
-
+      justify-content: flex-start;
+      align-items: flex-start;
       img {
         border-radius: 50%;
       }
@@ -194,11 +198,10 @@
       .recent-text {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: start;
+        justify-content: flex-start;
+        align-items: flex-start;
         padding-left: 10px;
         font-size: 16px;
-
         span {
           font-size: 10px;
         }
@@ -250,6 +253,7 @@
 }
 
 .settings {
+  color: #c0c0c0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -309,7 +313,7 @@
   }
 
   main {
-    .alert {
+    & .alert {
       grid-column: 1 / span 2;
       grid-row: 2 / 2;
     }
@@ -418,15 +422,23 @@
       flex-direction: column;
       padding: 0px;
 
-      & .member-users:nth-child(n + 2) {
+      & .member-users:nth-child(n + 3) {
         border-top: none;
       }
       & .member-users {
+        padding: 10px;
         border: 1px solid #c0c0c0;
         display: flex;
         flex-direction: row;
         width: 100%;
-        padding: 25px;
+        height: 150px;
+        text-align: center;
+
+        .profile-image {
+          margin: auto;
+          width: 100px;
+          height: 100px;
+        }
         & .members-text {
           margin: auto 20px;
           text-align: left;
@@ -438,22 +450,29 @@
     }
 
     & .recent-activity {
-      padding: 20px 0 25px 0;
-
+      padding: 20px 0 0 0;
       & .recent-container {
-        & .users:nth-child(n + 2) {
+        & .users:nth-child(n + 3) {
           border-top: none;
         }
         & .users {
+          padding: 10px;
           border: 1px solid #c0c0c0;
           display: flex;
           flex-direction: row;
+          height: 150px;
           width: 100%;
-          padding: 25px;
+          text-align: center;
+          & .userProfile-image {
+            margin: auto;
+            width: 100px;
+            height: 100px;
+          }
           & .recent-text {
             text-align: left;
             margin: auto 20px;
             color: #c0c0c0;
+            width: 100%;
             & .activity {
               color: #7377bf;
               font-size: 12px;
@@ -461,6 +480,13 @@
           }
         }
       }
+    }
+
+    & .message {
+      height: 100%;
+      border-left: 1px #c0c0c0 solid;
+      border-right: 1px #c0c0c0 solid;
+      border-bottom: 1px #c0c0c0 solid;
     }
   }
 }

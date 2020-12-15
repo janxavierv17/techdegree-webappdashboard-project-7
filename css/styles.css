@@ -713,34 +713,67 @@ header {
   align-items: center;
   background-color: #7477bf;
 }
+header .logo p {
+  color: white;
+}
 header .header-user {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-header .logo p {
-  color: white;
-}
-header svg {
+header .header-user svg {
+  margin: 10px;
   height: 15px;
   width: 20px;
 }
-header span {
+header .header-user svg:hover {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+header .header-user span {
   width: 130px;
   border-left: 1px #615555 solid;
   display: flex;
   justify-content: space-around;
 }
-header span img {
+header .header-user span img {
   border-radius: 50%;
   height: 20px;
   width: 20px;
 }
-header span h3 {
+header .header-user span h3 {
   color: white;
   font-weight: 400;
   font-size: 1rem;
+}
+header .header-user:before {
+  position: absolute;
+  background-color: #07f307;
+  top: 8.5px;
+  left: 25.2px;
+  z-index: 0px;
+  border-radius: 100%;
+  content: "";
+  height: 5px;
+  width: 5px;
 }
 
 nav {
@@ -937,6 +970,9 @@ nav img {
   padding: 10px;
   text-align: center;
 }
+.recent-activity .recentHeader {
+  color: #c0c0c0;
+}
 .recent-activity .recent-container {
   display: flex;
   flex-direction: column;
@@ -947,6 +983,8 @@ nav img {
   width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 .recent-activity .recent-container .users img {
   border-radius: 50%;
@@ -954,8 +992,8 @@ nav img {
 .recent-activity .recent-container .users .recent-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: start;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding-left: 10px;
   font-size: 16px;
 }
@@ -1004,6 +1042,7 @@ nav img {
 }
 
 .settings {
+  color: #c0c0c0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1158,15 +1197,22 @@ nav img {
     flex-direction: column;
     padding: 0px;
   }
-  main .members .member-users:nth-child(n+2) {
+  main .members .member-users:nth-child(n+3) {
     border-top: none;
   }
   main .members .member-users {
+    padding: 10px;
     border: 1px solid #c0c0c0;
     display: flex;
     flex-direction: row;
     width: 100%;
-    padding: 25px;
+    height: 150px;
+    text-align: center;
+  }
+  main .members .member-users .profile-image {
+    margin: auto;
+    width: 100px;
+    height: 100px;
   }
   main .members .member-users .members-text {
     margin: auto 20px;
@@ -1176,26 +1222,40 @@ nav img {
     text-align: right;
   }
   main .recent-activity {
-    padding: 20px 0 25px 0;
+    padding: 20px 0 0 0;
   }
-  main .recent-activity .recent-container .users:nth-child(n+2) {
+  main .recent-activity .recent-container .users:nth-child(n+3) {
     border-top: none;
   }
   main .recent-activity .recent-container .users {
+    padding: 10px;
     border: 1px solid #c0c0c0;
     display: flex;
     flex-direction: row;
+    height: 150px;
     width: 100%;
-    padding: 25px;
+    text-align: center;
+  }
+  main .recent-activity .recent-container .users .userProfile-image {
+    margin: auto;
+    width: 100px;
+    height: 100px;
   }
   main .recent-activity .recent-container .users .recent-text {
     text-align: left;
     margin: auto 20px;
     color: #c0c0c0;
+    width: 100%;
   }
   main .recent-activity .recent-container .users .recent-text .activity {
     color: #7377bf;
     font-size: 12px;
+  }
+  main .message {
+    height: 100%;
+    border-left: 1px #c0c0c0 solid;
+    border-right: 1px #c0c0c0 solid;
+    border-bottom: 1px #c0c0c0 solid;
   }
 }
 
