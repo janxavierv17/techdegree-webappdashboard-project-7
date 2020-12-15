@@ -725,18 +725,18 @@ header .header-user svg:hover {
     transform: translate3d(4px, 0, 0);
   }
 }
-header .header-user span {
+header .header-user .user {
   width: 130px;
   border-left: 1px #615555 solid;
   display: flex;
   justify-content: space-around;
 }
-header .header-user span img {
+header .header-user .user img {
   border-radius: 50%;
   height: 20px;
   width: 20px;
 }
-header .header-user span h3 {
+header .header-user .user h3 {
   color: white;
   font-weight: 400;
   font-size: 1rem;
